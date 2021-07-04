@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+:root {
+    --blue: #7E77FF;
+    --whiteblack: #2F3043;
+    --black: #393B3D;
+    --whiteblue: #00EAD3;
+    --gradent: linear-gradient(120deg, #6b60ec, 20%, #a166f4);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.2%;
+}
+*::selection {
+    color: #00EAD3;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0; padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    /* overflow-x: hidden; */
+}
+
+.fixed {
+    background: #fff;
+    padding: .5rem;
+    display: inline-block;
+    box-shadow: 0rem .1rem 1rem rgba(0,0,0,.1);
+    position: fixed;
+    top: 50%; left: 0;
+    border-radius: 5rem;
+    line-height: 60px;
+    transform: translate(50%, -50%);
+    text-align: center; 
+    z-index: 100;
+}
+.fixed i {
+    color: #222;
+    border-radius: 5rem;
+    transition: all .1s linear;
+    padding: 15px;
+}
+.fixed i:hover{
+    background-color: var(--whiteblue);
+    color: white;
+}
+/* .fixed i:hover:last-child{
+    background-color: rgba(0,0,0,.1);
+    color: red;
+} */
+
+section {
+    padding: 1rem 9%;
+}
+header {
+    background-image: url(../images/poduct\ bg.png);
+    width: 100%;
+    padding: 1rem 8%;
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+    margin-bottom: 16rem;
+}
+header .menu{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+header .menu .logo h3{
+    color: var(--whiteblack);
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+header .menu .logo h3 span {
+    text-transform: uppercase;
+    color: var(--blue);
+}
+header .menu #search {
+    border: none;
+    background: #fff;
+    box-shadow: 0rem .1rem 1rem rgba(0,0,0,.1);
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    transition: all .3s linear;
+    color: var(--blue);
+}
+header .menu i {
+    position: absolute;
+    /* top: 1   0%; */
+    right: 0;
+    font-size: 2rem;
+    color: #aaa;
+    transition: all .3s linear;
+    transform: translate(-100%, 50%);
+}
+header .menu #search:focus {
+    border: .1rem solid var(--whiteblue);
+    box-shadow: 0 .1rem 1rem rgba(0,0,0,.1);
+}
+header .menu #search:focus ~ i {
+    color: var(--whiteblue);
+    transform: translateX(50px) translate(-100%, 50%);
+}
+
+header main {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transform: translateY(10rem);
+}
+header main .main-img {
+    flex: 1 1 40rem;
+    transform: translateX(4rem);
+}
+header main .main-img img {
+    width: 100%;
+}
+header main .main-text {
+    font-size: 3rem;
+    flex: 1 1 30rem;
+}
+header main .main-text h1 {
+    color: var(--whiteblack);
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+header main .main-text h1 span {
+    color: var(--blue) !important;
+    text-transform: uppercase;
+}
+header main .main-text h2 {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: var(--whiteblack);
+}
+header main .main-text h2 span {
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.btn {
+    color: #fff;
+    background: var(--whiteblack);
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+}
+
+.btn:hover {
+    background-color: var(--blue);
+}
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 4.5rem 0;
+}
+.heading span {
+    color: var(--blue);
+}
+.arivals {
+    margin: 2rem 10%; 
+    background-image: url(../images/poduct\ bg.png);
+    box-shadow: 0 0rem 2rem rgba(0,0,0,.1);
+    background-position: left;
+}
+.arivals .trendy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.arivals .trendy .box {
+    position: relative;
+    flex: 1 1 30rem;
+    text-align: center;
+    transition: all .3s linear;
+    padding: 2.5rem 1rem;
+    margin-bottom: 5rem;
+}
+.arivals .trendy .box img {
+    height: 200px;
+}
+.arivals .trendy .box p {
+    color: #ccc;
+    font-size: 1rem;
+    padding-top: 2rem;
+}
+.arivals .trendy .box .suma {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+.arivals .trendy .box  .buton .btn {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    bottom: -5%;
+    transform: translateX(-50%);
+    background: var(--gradent);
+    opacity: 0;
+}
+.arivals .trendy .box:hover {
+    background: #fff;
+    box-shadow: 0 0rem 2rem rgba(0,0,0,.1);
+    z-index: 1;
+}
+.arivals .trendy .box:hover .btn {
+    opacity: 1; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queriy selection */
+@media (max-width: 991px) {
+    
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 5rem 2rem 2rem 2rem;
+    }
+    section {
+        padding: 3rem;
+    }
+    .arivals {
+        margin: 1rem 5%; 
+    }
+}
+@media (max-width: 807px) {
+    main .main-text {
+        text-align: center;
+        line-height: 6.5rem;
+    }
+    .arivals {
+        margin: 1rem 4%;
+    }
+    .arivals .trendy .box {
+        flex: 1 1 28rem;
+    }
+
+}
+@media (max-width: 615px) {
+    
+    .arivals .trendy .box {
+        flex: 1 1 26rem;
+    }
+    header main .main-img {
+        transform: translateX(0);
+    }
+
+}
+@media (max-width: 400px) {
+    
+    html {
+        font-size: 52%;
+    }
+    .fixed {
+        display: none;
+    }
+
+}
